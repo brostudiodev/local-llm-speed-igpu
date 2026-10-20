@@ -1,0 +1,92 @@
+name: Add a machine
+description: Share generation speed you measured on your own hardware
+title: "[machine] "
+labels: ["results"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks. Numbers from different hardware are the most useful thing this
+        repository can collect. Write `not recorded` for anything you do not
+        have — an empty field is better than a guess.
+  - type: input
+    id: machine
+    attributes:
+      label: Machine
+      description: CPU, GPU, RAM, and whether the GPU is integrated or discrete
+      placeholder: AMD Ryzen AI 9 HX 470, integrated Radeon 890M, 32 GB shared
+    validations:
+      required: true
+  - type: input
+    id: runtime
+    attributes:
+      label: Runtime and version
+      placeholder: llama.cpp b1234 / Ollama 0.x / vLLM 0.x
+    validations:
+      required: true
+  - type: dropdown
+    id: backend
+    attributes:
+      label: Backend
+      options:
+        - Vulkan
+        - ROCm / HIP
+        - CUDA
+        - Metal
+        - CPU only
+        - not recorded
+    validations:
+      required: true
+  - type: textarea
+    id: results
+    attributes:
+      label: Results
+      description: One line per model. Model, total/active parameters, size on disk, quantisation, tok/s.
+      placeholder: |
+        qwen3-coder-30b-a3b, 30B/3B, 18 GB, Q4_K_M, 30.4 tok/s
+        granite-4.2-8b, 8B dense, 4 GB, not recorded, 45.7 tok/s
+      render: text
+    validations:
+      required: true
+  - type: dropdown
+    id: regime
+    attributes:
+      label: Prompt
+      description: A warm short prompt and a long context give very different numbers.
+      options:
+        - short prompt, warm model
+        - short prompt, cold model
+        - long context
+        - mixed, stated per row
+    validations:
+      required: true
+  - type: input
+    id: tokens
+    attributes:
+      label: Tokens generated per run, and runs per model
+      placeholder: 256 tokens, 1 warmup + 3 measured
+    validations:
+      required: true
+  - type: dropdown
+    id: method
+    attributes:
+      label: How did you measure it?
+      options:
+        - scripts/measure_tps.py from this repository
+        - llama-bench
+        - the runtime's own log or timings
+        - something else, described below
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else
+      description: Power draw, speculative decoding, offload flags, oddities you cannot explain yet.
+  - type: checkboxes
+    id: own
+    attributes:
+      label: Confirm
+      options:
+        - label: I measured these numbers myself on the machine described above.
+          required: true

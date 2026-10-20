@@ -1,0 +1,24 @@
+model,family,params_total_b,params_active_b,architecture,quantisation,size_on_disk_gb,tps_reported,tps_min,tps_max,regime,runtime_notes,intended_use
+granite-4.2-8b,Granite 4.2,8,8,dense,not recorded,4,45.7,45.7,45.7,single run,ngl=99; size on disk approximate,not recorded
+NVIDIA-Nemotron-3.5-Lightning-30B-A3B,Nemotron 3.5 Lightning,30,3,MoE,not recorded,18,29.9-32.9 (best 31.9),29.9,32.9,single run,MTP n2,not recorded
+Qwen3-Coder-30B-A3B,Qwen3-Coder,30,3,MoE,Q4_K_M,18,30.4,30.4,30.4,single run,,code
+gpt-oss-20b,gpt-oss,20,not recorded,MoE,MXFP4 (native),11,30.4,30.4,30.4,single run,ngl=99,not recorded
+Qwen3.6-35B-A3B,Qwen3.6,35,3,MoE,Q4_K_M,21,30.4 base / 27.4 MTP,27.4,30.4,single run,base and MTP builds measured separately,not recorded
+Qwen3.8-9B,Qwen3.8,9,9,dense,Q4_K_M,5.4,27.7-28.1,27.7,28.1,single run,DFlash,not recorded
+gemma-4-26B-A4B-it-qat,Gemma 4,26,4,MoE,QAT 4-bit,14,~28,28,28,single run,QAT; figure approximate,not recorded
+Moonlight-16B-A3B (APEX-i-quality),Moonlight,16,3,MoE,not recorded,11.9,26.57,26.57,26.57,single run,MLA,not recorded
+SmallThinker-21B-A3B (QAT),SmallThinker,21,3,MoE,QAT 4-bit,12.2,26.23,26.23,26.23,single run,QAT,not recorded
+Nail-35B-A3B (MTP),Nail,35,3,MoE,not recorded,22.8,24.17,24.17,24.17,single run,MTP,not recorded
+Tiel-Coder-35B-A3B (resident),Tiel-Coder,35,3,MoE,not recorded,21.7,23.11,23.11,23.11,single run,MTP; kept resident in memory,code
+ornith-1.5-35b,ornith 1.5,35,3,MoE,not recorded,21,22.6,22.6,22.6,single run,,not recorded
+Nex-N2.5-mini,Nex N2.5 mini,not recorded,3,MoE,not recorded,21.2,21.11,21.11,21.11,single run,total parameter count not recorded,not recorded
+Nail-35B-A3B (base),Nail,35,3,MoE,not recorded,22.4,17.86,17.86,17.86,single run,base build (no MTP),not recorded
+Qwen-AgentWorld-35B-A3B,Qwen-AgentWorld,35,3,MoE,Q4_K_M,21,16.3,16.3,16.3,single run,,not recorded
+ornith-1.5-9b-mtp,ornith 1.5,9,9,dense,not recorded,5.3,~14 long context / 29 warm short prompt,14,29,long context and warm short prompt,memory-bandwidth bound floor,not recorded
+THUDM GLM-Z1-9B,GLM-Z1,9,9,dense,not recorded,5.8,13.4 long context / 15.7 warm,13.4,15.7,long context and warm,CPU,not recorded
+gemma-4-12b-it,Gemma 4,12,12,dense,not recorded,7.9,11.3 long context / up to 34 warm short prompt,11.3,34,long context and warm short prompt,CPU,not recorded
+Qwen3.8-27B-MTP,Qwen3.8,27,27,dense,Q4_K_M,16,7.6,7.6,7.6,single run,MTP,not recorded
+gemma-4-31B-it,Gemma 4,31,31,dense,not recorded,18,6.1-6.4 (DSpark),6.1,6.4,single run,DSpark,not recorded
+Muse-Glimmer-30B-UD,Muse Glimmer,30,30,dense,not recorded,15,4.2,4.2,4.2,single run,,not recorded
+DeepSeek-R1-Distill-Qwen-32B,DeepSeek-R1-Distill-Qwen,32,32,dense,not recorded,19,~3-4,3,4,single run,figure approximate,not recorded
+Qwen3.6-27B-Fable,Qwen3.6 Fable,27,27,dense,Q4_K_M,17,~3.5,3.5,3.5,single run,figure approximate,not recorded
