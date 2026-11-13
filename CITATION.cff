@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use these measurements, please cite this repository."
+title: "Local LLM speed on an integrated GPU - 23 models, one mini PC"
+abstract: "Generation speed in tokens per second for 23 local large language models, measured one model at a time on a single AMD mini PC with an integrated Radeon 890M and no discrete graphics card, September 2026. Contains the machine-readable CSV, the measurement script, and a written list of the known gaps in the method."
+type: dataset
+authors:
+  - family-names: "Nowakowski"
+    given-names: "Michał"
+    website: "https://automationbro.pl"
+repository-code: "https://github.com/brostudiodev/local-llm-speed-igpu"
+url: "https://automationbro.pl"
+license-url: "https://github.com/brostudiodev/local-llm-speed-igpu/blob/main/LICENSE"
+version: "1.0.0"
+date-released: "2026-11-13"
+keywords:
+  - local LLM
+  - integrated GPU
+  - Radeon 890M
+  - Ryzen AI
+  - mini PC
+  - llama.cpp
+  - tokens per second
+  - mixture of experts
+  - benchmark
